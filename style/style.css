@@ -146,6 +146,10 @@ li:hover {
     position: fixed !important;
     bottom: 0;
   }
+  .service-footer-mobile {
+    position: fixed !important;
+    bottom: 0;
+  }
 }
 @media (max-width: 1055px) {
   .TextParragraph {

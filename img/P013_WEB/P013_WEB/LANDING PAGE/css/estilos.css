@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+
+
+body{
+    font-family: 'Poppins';
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    overflow-x: hidden; /* Evitar desplazamiento horizontal */
+    background-color: black; /* Cambiamos el fondo a negro */
+    
+}
+
+.vertical-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    background-color: #000000; /* Cambiamos el color del menú lateral */
+    color: #fff;
+    height: 100%;
+    overflow-y: auto;
+}
+.vertical-menu ul li a {
+    color: #acacac;
+    text-decoration: none;
+    font-weight: lighter;
+    transition: color 0.3s; /* Agregamos una transición para suavizar el cambio de color */
+}
+
+.vertical-menu ul li a:hover {
+    color: rgb(118, 174, 202); /* Cambiamos el color a azul cuando se pasa el mouse por encima */
+}
+
+.menu-header {
+    padding: 40px;
+    text-align: center;
+}
+
+.menu-header img {
+    max-width: 105px;
+    margin-left: -10px;
+}
+
+.vertical-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.vertical-menu ul li {
+    padding: 5px 25px;
+}
+
+.vertical-menu ul li a {
+    color: #acacac;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+.main {
+    margin-left: 0px;
+    padding: 0;
+}
+
+.work-section {
+    padding: 11px;
+    margin: 0; /* Eliminamos todos los márgenes */
+}
+/* Agrega este bloque al final de tu archivo de estilos CSS */
+.Services-section {
+    padding: 20px;
+    background-color: #f8f8f8; /* Color de fondo para la sección de servicios */
+}
+
+.Services-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.Services-section p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+
+/* Estilos para la página de contacto */
+.contact-page {
+    padding: 50px;
+    margin-left: 200px; /* Ancho del menú vertical */
+}
+
+.contact-header h1 {
+    margin-bottom: 50px;
+    color: white;
+    font-size: 40px; /* Tamaño de la letra del título */
+    font-family: 'Poppins'; /* Tipografía del título */
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.contact-text {
+    flex-basis: 80%; /* Ancho completo del texto */
+    color: #e5e5e5; /* Texto en gris claro */
+    margin-bottom: 100px; /* Espacio inferior */
+    margin-right: 50px; /* Espacio inferior */
+    font-size: 18px; /* Tamaño de la letra del título */
+    font-family: 'Poppins'; /* Tipografía del título */
+}
+
+.contact-areas {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%; /* Ancho completo del área de las cajas */
+    margin-top: 100px; /* Espacio superior */
+}
+
+.contact-details {
+    width: 100%; /* Ancho completo del área de detalles */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-box {
+    flex-basis: calc(50% - 15px); /* Ancho de caja ajustado */
+    background-color: transparent; /* Fondo transparente */
+    padding: 80px;
+    color: #cccccc75;
+    margin-bottom: 20px; /* Espacio inferior */
+    font-size: 20px; /* Tamaño de la letra de las áreas */
+    font-family: 'Poppins'; /* Tipografía de las áreas */
+}
+
+.contact-box h2, .contact-box p, .contact-box a {
+    color: #cccccc7c;
+    font-size: 17px; /* Tamaño de la letra de las áreas */
+    font-family: 'Poppins'; /* Tipografía de las áreas */
+    margin-bottom: 2px;
+}
+
+.contact-form {
+    background-color: transparent; /* Fondo transparente */
+    padding: 20px;
+    color: #cccccc70;
+    width: 100%;
+    font-size: 14px; /* Tamaño de la letra de las áreas */
+    font-family: 'Poppins'; /* Tipografía de las áreas */
+ 
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+
+} 
+/* Agrega margen inferior solo al campo Name */
+.contact-form label[for="name"] + input {
+    margin-bottom: 10px;
+}
+
+/* Agrega margen inferior solo al campo Email */
+.contact-form label[for="email"] + input {
+    margin-bottom: 10px;
+}
+
+/* Agrega margen inferior solo al campo Message */
+.contact-form label[for="message"] + textarea {
+    margin-bottom: 10px;
+}
+    
+    
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc70;
+    background-color: transparent;
+    color: white;
+    margin-bottom: 19px;
+    font-size: 14px; /* Tamaño de la letra de las áreas */
+    font-family: 'Poppins'; /* Tipografía de las áreas */
+}
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #cccccc;
+    
+}
+
+.contact-form button[type="submit"] {
+    background-color: #5792b930;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #5792b9;
+}
+
+
+.contact-text.animate-entry,
+.contact-box.animate-entry,
+.contact-form.animate-entry {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-entry.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+/* Resto del código CSS anterior */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 8px; /* Ajustamos la separación entre imágenes */
+    margin-top: 4px;
+    margin-right: 8px; /* Eliminamos el margen derecho */
+    margin-bottom: 0; /* Eliminamos el margen inferior */
+    margin-left: 200px;
+    padding: 0;
+    overflow: hidden;
+}
+/* Resto del código CSS anterior */
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Para cada imagen en cada columna */
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0px;
+    margin: 1px 0; /* Margen de 11px en la parte superior e inferior */
+    transform: translateY(0px); /* Desplazamiento inicial hacia abajo */
+    opacity: 2; /* Opacidad inicial */
+    transition: transform 2s ease, opacity 2s ease;
+    cursor: pointer; /* Cambiar a cursor de puntero al pasar el mouse */
+}
+
+/* Aplicamos desaturación a las imágenes */
+.image-item img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(50%); /* Sin desaturación */
+    transition: filter 0.3s;
+    opacity: 1; /* Opacidad inicial */
+}
+
+/* Cambiamos a desaturación al pasar el mouse */
+.image-item:hover img {
+    filter: grayscale(0%); /* Desaturación completa */
+    opacity: 2; /* Opacidad reducida */
+}
+
+/* Mostrar las imágenes cuando llegan al viewport */
+.image-item.active {
+    transform: translateY(0);
+    opacity: 1;
+
+}
+.image-description {
+    position: absolute;
+    bottom: -100%; /* Inicialmente fuera de la vista */
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.112);
+    color: white;
+    transition: bottom 0.5s ease; /* Transición suave */
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.animate-entry {
+    animation: slideInFromBottom 0.5s ease-out forwards;
+}
+
+
+
+
+
+
+.image-item:hover .image-description {
+    bottom: 0; /* Muestra el texto al pasar el mouse */
+}
+
+/* Agrega este bloque al final de tu archivo de estilos CSS */
+.social-icons-vertical {
+    position: fixed;
+    bottom: 100px; /* Ajusta la distancia desde abajo */
+    left: 70px; /* Ajusta la distancia desde la izquierda */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    z-index: 1000; /* Asegura que los iconos estén en la parte superior */
+}
+
+.social-icons-vertical a {
+    margin: 5px 0;
+}
+
+.social-icons-vertical img {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/* Resto de tus estilos CSS */
+
+.slider-container {
+    
+    position: fixed;
+    top: 5px; /* Margen superior de 5px */
+    bottom: 20px; /* Margen inferior de 20px */
+    right: 5px; /* Margen derecho de 5px */
+    left: calc(200px + 5px); /* Margen izquierdo para evitar el menú */
+    display: flex;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    animation:  scroll 30s infinite linear; ; /* Animación de desplazamiento */
+    
+}
+
+.slider img {
+    width: auto;
+    height: 100%;
+    margin-right: 5px; /* Espacio entre imágenes */
+    filter: grayscale(50%);
+    transition: filter 0.2s; /* Transición del filtro */
+}
+
+.slider img:hover {
+    filter: grayscale(0%);
+}
+
+/* Estilos para la descripción */
+.image-description {
+    position: absolute;
+    bottom: -100%; /* Inicialmente fuera de la vista */
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.208);
+    color: white;
+    transition: bottom 0.3s ease; /* Transición suave */
+}
+
+.slider img:hover + .image-description {
+    bottom: 0; /* Muestra el texto al pasar el mouse */
+}
+
+@keyframes  scroll {
+     0% {margin-left: 0%;}
+     5% {margin-left: 0%;}
+
+
+   10% {margin-left: -60%;}
+   15% {margin-left: -60%;}
+
+
+    20% {margin-left: -130%;}
+    25% {margin-left: -130%;}
+
+
+    30% {margin-left: -200%;}
+    35% {margin-left: -200%;}
+
+    40% {margin-left: -260%;}
+    45% {margin-left: -260%;}
+    
+    45% {margin-right: 0%;}
+     0% {margin-right: 0%;}
+
+}
+
+

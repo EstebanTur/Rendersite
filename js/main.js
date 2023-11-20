@@ -46,7 +46,7 @@ function loadSideMenuContent() {
   // Define el contenido del menú lateral
   const sideMenuContent = `
   
-    <a class="navbar-brand" href="./index.html"><img src="./img/logo menu.png" height="30px" alt="" /></a>
+    <a class="navbar-brand" href="./index.html"><img src="./img/logo_a_la_izquierda.png" height="40px" alt="" /></a>
       <ul class="list-unstyled navbar-nav justify-content-end ">
         <li class="my-3"><a href="./index.html" class="my-2 text-decoration-none">Home</a></li>
         <li class="my-3"><a href="./work.html" class="my-2 text-decoration-none">Work</a></li>
@@ -80,7 +80,7 @@ function loadListContent() {
   // Datos correspondientes a cada ítem
   let serviceSubDescriptionContent = `
   <div>
-  <h3 class="h5" >3D MODELING</h3>
+  <h3 class="h5 " >3D MODELING</h3>
   <p class ="text-left">Detailed 3D modeling of both exterior and interior architecture, meticulously crafted using software such as SketchUp or 3ds Max. 
   This intricate modeling process is informed by the project plans, ensuring a highly accurate representation. 
   These 3D models serve a dual purpose: they play a pivotal role in advancing the project's design, while also enabling the generation of 

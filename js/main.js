@@ -46,7 +46,7 @@ function loadSideMenuContent() {
   // Define el contenido del menú lateral
   const sideMenuContent = `
   
-    <a class="navbar-brand" href="/index.html"><img src="./img/logo menu.png" height="30px" alt="" /></a>
+    <a class="navbar-brand" href="./index.html"><img src="./img/logo menu.png" height="30px" alt="" /></a>
       <ul class="list-unstyled navbar-nav justify-content-end ">
         <li class="my-3"><a href="./index.html" class="my-2 text-decoration-none">Home</a></li>
         <li class="my-3"><a href="./work.html" class="my-2 text-decoration-none">Work</a></li>
@@ -73,20 +73,78 @@ function loadSideMenuContent() {
   // Asigna el contenido al menú lateral
   sideMenu.innerHTML = sideMenuContent;
 }
+//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES
+//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES
+
 function loadListContent() {
-  const serviceSubDescriptionContent = `
-<div>
-<h3 class="h5" >Services title</h3>
+  // Datos correspondientes a cada ítem
+  let serviceSubDescriptionContent = `
+  <div>
+  <h3 class="h5" >3D MODELING</h3>
   <p class ="text-left">Detailed 3D modeling of both exterior and interior architecture, meticulously crafted using software such as SketchUp or 3ds Max. 
   This intricate modeling process is informed by the project plans, ensuring a highly accurate representation. 
   These 3D models serve a dual purpose: they play a pivotal role in advancing the project's design, while also enabling the generation of 
   photorealistic images and videos that vividly showcase the project's potential.</p>
-</div>`;
+  </div>`;
+  const itemData = {
+    "item-1": `
+    <div>
+  <h3 class="h5" >3D MODELING</h3>
+  <p class ="text-left">Detailed 3D modeling of both exterior and interior architecture, meticulously crafted using software such as SketchUp or 3ds Max. 
+  This intricate modeling process is informed by the project plans, ensuring a highly accurate representation. 
+  These 3D models serve a dual purpose: they play a pivotal role in advancing the project's design, while also enabling the generation of 
+  photorealistic images and videos that vividly showcase the project's potential.</p>
+  </div>`,
+    "item-2": `
+    <div>
+      <h3 class="h5">EXTERIOR RENDERING
+      </h3>
+      <p class="text-left">We create beautiful photorealistic visualization of the architectural project and its surroundings, taking into account every architectural 
+      detail as well as the landscaping design and vegetation. In this way, we obtain beautiful and striking images that help to highlight the project and enchant the client.</p>
+    </div>`,
+    "item-3": `<div>
+  <h3 class="h5" >INTERIOR RENDERING</h3>
+  <p class ="text-left">We create beautiful photorealistic visualizations of the interior design project, its equipment and decoration, 
+  paying attention to all architectural details and lighting, as well as each specific piece of furniture and decorative element. 
+  In this way, we obtain beautiful and impactful images that highlight the project and win over our clients.</p>
+  </div>`,
+    "item-4": `<div>
+  <h3 class="h5" >FURNITURE AND PRODUCT RENDERING</h3>
+  <p class ="text-left">We create beautiful and modern 3D environments to showcase your furniture and design objects in the most attractive and impactful way possible. 
+  Our goal is to help you create sales catalogs that generate interest and convince your customers that your products are the best option for them. 
+  We pay special attention to details and design to create environments that highlight your products and make them stand out.</p>
+  </div>`,
+    "item-5": `<div>
+  <h3 class="h5" >360/VR RENDERING</h3>
+  <p class ="text-left">We create stunning and realistic 360 and VR renderings that showcase your architectural and interior design projects in the most attractive and 
+  convincing way possible. Our goal is to help you create immersive experiences that generate interest and allow your clients to explore and learn about your 
+  projects in a unique and enriching way.</p>
+  </div>`,
+    "item-6": `<div>
+  <h3 class="h5" >ANIMATIONS</h3>
+  <p class ="text-left">We create beautiful and engaging 3D animations to showcase your architectural, interior design, and product design projects in the most impactful and convincing way possible. 
+  We pay special attention to details to create animations that highlight your projects and make them stand out. 
+  Our goal is to help you create presentations and promotional videos that generate impact and convince your clients that your projects are the best option for them.</p>
+  </div>`,
+    "item-7": `<div>
+  <h3 class="h5" >WEB DEVELOPMENT</h3>
+  <p class ="text-left">We design custom websites to promote and sell architectural projects, highlighting their uniqueness. 
+  With advanced features such as 3D visualization and high-quality image galleries, we provide an immersive experience that simplifies product representation.</p>
+  </div>`,
+  };
+  const opciones = document.querySelectorAll(".TextParragraph");
+  // Recorre cada ítem y le asigna el contenido correspondiente
+  opciones.forEach((opcion) => {
+    opcion.addEventListener("click", () => {
+      const itemId = opcion.id;
+      const numeroIdDeItem = `${itemId.slice(-1)}`;
+      serviceSubDescription.innerHTML = itemData[`item-${numeroIdDeItem}`];
+    });
+  });
+
   serviceSubDescription.classList.remove("d-none");
   serviceSubDescription.innerHTML = serviceSubDescriptionContent;
 }
-//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES
-//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES
 
 //Muestreo de imagenes segun opcion seleccionada
 descriptionService.forEach((item) => {

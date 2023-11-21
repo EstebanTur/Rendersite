@@ -327,28 +327,29 @@ li:hover {
 /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/
 .work-main {
   margin-right: 0;
+  padding-right: 0;
 }
 .grid-gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 4px; /* Ajustamos la separación entre imágenes */
-  margin-bottom: 0; /* Eliminamos el margen inferior */
+  grid-gap: 3px; /* Ajustamos la separación entre imágenes */
+  /* Eliminamos el margen inferior */
   padding: 0;
   overflow: hidden;
 }
 .work-column {
   display: flex;
   flex-direction: column;
+  grid-gap: 3px;
 }
 .grid-item {
   position: relative;
   overflow: hidden;
   border-radius: 0px;
-  margin: 1px 0; /* Margen de 11px en la parte superior e inferior */
+
   transform: translateY(0px); /* Desplazamiento inicial hacia abajo */
   opacity: 2; /* Opacidad inicial */
   transition: transform 2s ease, opacity 2s ease;
-  cursor: pointer; /* Cambiar a cursor de puntero al pasar el mouse */
   cursor: pointer; /* Cambiar a cursor de puntero al pasar el mouse */
 }
 .grid-gallery .grid-item img {

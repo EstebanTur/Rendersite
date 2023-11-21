@@ -5,6 +5,14 @@ body {
   font-size: 0.8rem;
   height: 100%;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600 !important;
+}
 li {
   color: rgba(255, 255, 255, 1);
 }
@@ -23,6 +31,8 @@ li:hover {
 /* SIDE MENU */
 .side-menu {
   padding-left: 25px;
+  height: 90vh;
+  justify-content: space-between;
 }
 .side-menu a {
   color: rgba(255, 255, 255, 0.75);
@@ -30,13 +40,18 @@ li:hover {
 .side-menu a:hover {
   color: rgb(118, 174, 202);
 }
+.side-menu-work {
+  position: fixed;
+}
+.links-browser {
+  margin-top: 40px;
+}
 
 /* Iconos de redes */
 .social-icons-container {
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
-  margin-top: 30vh;
 }
 .inner-social-icons-container {
   display: flex;
@@ -45,6 +60,8 @@ li:hover {
 .inner-social-icons-container a {
   margin: 20px;
   margin-left: 0;
+  margin-bottom: 0;
+  margin-top: 40px;
 }
 .index-main {
   height: 90vh;
@@ -75,17 +92,16 @@ li:hover {
 }
 
 .slider .slide img {
-  width: 600px;
   height: 100%;
   object-fit: cover;
   filter: grayscale(80%);
   transition: all 0.3s ease;
   transition: width 2s ease;
   cursor: pointer;
+  margin-right: 5px;
 }
 .slider .slide img:hover {
   filter: grayscale(0%);
-  width: 800px;
 }
 @keyframes scroll {
   0% {
@@ -249,6 +265,13 @@ li:hover {
 #serviceSubDescription {
   max-height: 200px; /* Establecer una altura mínima */
 }
+.second-title-container {
+  height: fit-content;
+}
+.service-second-paragraph {
+  margin-bottom: 30px;
+}
+
 .dropdown-menu {
   position: relative !important;
 }
@@ -302,38 +325,49 @@ li:hover {
   }
 }
 /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/ /*Work Pager*/
+.work-main {
+  margin-right: 0;
+}
 .grid-gallery {
   display: grid;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 25px 10px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 250px;
-  grid-auto-flow: dense;
-  grid-gap: 10px;
-}
-.grid-gallery .grid-item {
-  position: relative;
-  background-color: transparent;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4px; /* Ajustamos la separación entre imágenes */
+  margin-bottom: 0; /* Eliminamos el margen inferior */
+  padding: 0;
   overflow: hidden;
+}
+.work-column {
+  display: flex;
+  flex-direction: column;
+}
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0px;
+  margin: 1px 0; /* Margen de 11px en la parte superior e inferior */
+  transform: translateY(0px); /* Desplazamiento inicial hacia abajo */
+  opacity: 2; /* Opacidad inicial */
+  transition: transform 2s ease, opacity 2s ease;
+  cursor: pointer; /* Cambiar a cursor de puntero al pasar el mouse */
+  cursor: pointer; /* Cambiar a cursor de puntero al pasar el mouse */
 }
 .grid-gallery .grid-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  height: auto;
+  filter: grayscale(50%); /* Sin desaturación */
+  transition: filter 0.3s;
+  opacity: 1; /* Opacidad inicial */
+  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 .grid-gallery .grid-item:hover img {
+  filter: grayscale(0%); /* Desaturación completa */
+  opacity: 2; /* Opacidad reducida */
   transform: scale(1.1);
 }
 .grid-gallery .grid-item a {
   cursor: zoom-in;
 }
-.grid-gallery .grid-item:nth-child(3n-2) {
-  grid-column: span 2;
-  grid-row: span 2;
-}
+
 .image-description {
   position: absolute;
   bottom: 0; /* Inicialmente fuera de la vista */
@@ -350,12 +384,6 @@ li:hover {
 }
 @media (max-width: 768px) {
   .grid-gallery {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 250px;
-  }
-  .grid-gallery .grid-item:nth-child(3n-2) {
-    grid-column: unset;
-    grid-row: unset;
   }
 }
 
@@ -376,4 +404,11 @@ li:hover {
 
 .padding-right {
   padding-right: 0px !important;
+}
+
+/*Aumento de tamaño de letra para pantallas extra grandes*/
+@media (min-width: 1500px) {
+  body {
+    font-size: 1rem;
+  }
 }

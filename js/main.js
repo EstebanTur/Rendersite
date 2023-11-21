@@ -45,14 +45,15 @@ function hideSideMenu() {
 function loadSideMenuContent() {
   // Define el contenido del menú lateral
   const sideMenuContent = `
-  
+    <div>
     <a class="navbar-brand" href="./index.html"><img src="./img/logo_a_la_izquierda.png" height="40px" alt="" /></a>
-      <ul class="list-unstyled navbar-nav justify-content-end ">
-        <li class="my-3"><a href="./index.html" class="my-2 text-decoration-none">Home</a></li>
-        <li class="my-3"><a href="./work.html" class="my-2 text-decoration-none">Work</a></li>
-        <li class="my-3"><a href="./services.html" class="my-2 text-decoration-none">Services</a></li>
-        <li class="my-3"><a href="./contact.html" class="my-2 text-decoration-none">Contact</a></li>
-      </ul>
+    <ul class="list-unstyled navbar-nav justify-content-end links-browser">
+    <li class="my-2"><a href="./index.html" class="my-2 text-decoration-none">Home</a></li>
+    <li class="my-2"><a href="./work.html" class="my-2 text-decoration-none">Work</a></li>
+    <li class="my-2"><a href="./services.html" class="my-2 text-decoration-none">Services</a></li>
+    <li class="my-2"><a href="./contact.html" class="my-2 text-decoration-none">Contact</a></li>
+    </ul>
+    </div>
     <div class="social-icons-container">
       <div class="inner-social-icons-container">
         <a href="https://www.facebook.com/javiAbalosArq3d/" target="_blank" class="text-decoration-none  ">
@@ -80,7 +81,7 @@ function loadListContent() {
   // Datos correspondientes a cada ítem
   let serviceSubDescriptionContent = `
   <div>
-  <h3 class="h5 " >3D MODELING</h3>
+  <h3 class="" >3D MODELING</h3>
   <p class ="text-left">Detailed 3D modeling of both exterior and interior architecture, meticulously crafted using software such as SketchUp or 3ds Max. 
   This intricate modeling process is informed by the project plans, ensuring a highly accurate representation. 
   These 3D models serve a dual purpose: they play a pivotal role in advancing the project's design, while also enabling the generation of 
@@ -89,7 +90,7 @@ function loadListContent() {
   const itemData = {
     "item-1": `
     <div>
-  <h3 class="h5" >3D MODELING</h3>
+  <h3 class="" >3D MODELING</h3>
   <p class ="text-left">Detailed 3D modeling of both exterior and interior architecture, meticulously crafted using software such as SketchUp or 3ds Max. 
   This intricate modeling process is informed by the project plans, ensuring a highly accurate representation. 
   These 3D models serve a dual purpose: they play a pivotal role in advancing the project's design, while also enabling the generation of 

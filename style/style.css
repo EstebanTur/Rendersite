@@ -34,7 +34,7 @@ li h6:hover {
 /* SIDE MENU */
 .side-menu {
   padding-left: 25px;
-  height: 90vh;
+  height: 95vh;
   justify-content: space-between;
 }
 .side-menu a {
@@ -68,7 +68,7 @@ li h6:hover {
   margin-top: 40px;
 }
 .index-main {
-  height: 90vh;
+  height: 95vh !important;
   width: 100%;
   overflow: hidden;
   margin: 0;

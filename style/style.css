@@ -8,9 +8,7 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   font-weight: 600 !important;
 }
 li {
@@ -19,7 +17,12 @@ li {
 li span {
   color: rgba(255, 255, 255, 0.75);
 }
-li:hover {
+
+li span:hover {
+  color: rgb(118, 174, 202);
+  font-weight: 600;
+}
+li h6:hover {
   color: rgb(118, 174, 202);
 }
 .social-icons-container .inner-social-icons-container a img {
@@ -35,10 +38,11 @@ li:hover {
   justify-content: space-between;
 }
 .side-menu a {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.85);
 }
 .side-menu a:hover {
   color: rgb(118, 174, 202);
+  font-weight: 600;
 }
 .side-menu-work {
   position: fixed;
@@ -307,6 +311,7 @@ li:hover {
   .footer {
     position: fixed;
     bottom: 0;
+    height: 5vh;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -328,7 +333,7 @@ li:hover {
 .work-main {
   margin-right: 0;
   padding-right: 0;
-  height: 90vh;
+  height: 95vh;
   overflow: auto;
 }
 .grid-gallery {
@@ -338,6 +343,17 @@ li:hover {
   /* Eliminamos el margen inferior */
   padding: 0;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .grid-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+/* para tabletas */
+@media (min-width: 768px) and (max-width: 992px) {
+  .grid-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .work-column {
   display: flex;

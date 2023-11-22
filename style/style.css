@@ -86,9 +86,9 @@ li h6:hover {
   display: flex;
   position: relative;
   white-space: nowrap;
-  animation: scroll 40s linear infinite;
-  -webkit-animation: scroll 40s linear infinite;
-  width: calc(100% * 20);
+  animation: scroll 75s infinite linear;
+
+  width: calc(100% * 10);
   transition: transform 0.3s ease;
 }
 .slider .slide {
@@ -96,7 +96,8 @@ li h6:hover {
 }
 
 .slider .slide img {
-  height: 100%;
+  width: 1400px;
+  height: auto;
   object-fit: cover;
   filter: grayscale(80%);
   transition: all 0.3s ease;
@@ -108,13 +109,11 @@ li h6:hover {
   filter: grayscale(0%);
 }
 @keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
+  from {
     transform: translateX(0);
   }
-  100% {
-    -webkit-transform: translateX(calc(-200px * 10));
-    transform: translateX(calc(-200px * 10));
+  to {
+    transform: translateX(calc(-1400px * 10));
   }
 }
 @keyframes reverse-scroll {

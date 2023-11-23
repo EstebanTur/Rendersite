@@ -279,18 +279,24 @@ li h6:hover {
 /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */
 .card {
   background-color: transparent;
-  height: 150px;
-  width: auto;
+  height: 400px;
+
   color: white;
-  font-weight: 400;
+
   overflow: hidden;
 }
+.card-title {
+  font-weight: 600;
+}
+
 .bg-img {
   opacity: 0.2;
   position: absolute;
   left: 0;
   top: 0;
+  height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 /*.bg-img on touch change opacity*/
 .card:hover img {

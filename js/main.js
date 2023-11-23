@@ -106,8 +106,7 @@ function loadListContent() {
     <div class="animate__animated animate__fadeIn" >
       <h3 class="h5">EXTERIOR RENDERING
       </h3>
-      <p class="text-left">We create beautiful photorealistic visualization of the architectural project and its surroundings, taking into account every architectural 
-      detail as well as the landscaping design and vegetation. In this way, we obtain beautiful and striking images that help to highlight the project and enchant the client.</p>
+      <p class="text-left">We create beautiful photorealistic visualization of the architectural project and its surroundings, taking into account every architectural detail as well as the landscaping design and vegetation. In this way, we obtain beautiful and striking images that help to highlight the project and enchant the client.</p>
     </div>`,
     "item-3": `<div class="animate__animated animate__fadeIn" >
   <h3 class="h5" >INTERIOR RENDERING</h3>
@@ -117,9 +116,9 @@ function loadListContent() {
   </div>`,
     "item-4": `<div class="animate__animated animate__fadeIn" >
   <h3 class="h5" >FURNITURE AND PRODUCT RENDERING</h3>
-  <p class ="text-left">We create beautiful and modern 3D environments to showcase your furniture and design objects in the most attractive and impactful way possible. 
-  Our goal is to help you create sales catalogs that generate interest and convince your customers that your products are the best option for them. 
-  We pay special attention to details and design to create environments that highlight your products and make them stand out.</p>
+    <p class ="text-left">We create beautiful and modern 3D environments to showcase your furniture and design objects in the most attractive and impactful way possible. 
+    Our goal is to help you create sales catalogs that generate interest and convince your customers that your products are the best option for them. 
+    We pay special attention to details and design to create environments that highlight your products and make them stand out.</p>
   </div>`,
     "item-5": `<div class="animate__animated animate__fadeIn" >
   <h3 class="h5" >360/VR RENDERING</h3>

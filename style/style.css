@@ -86,7 +86,7 @@ li h6:hover {
   display: flex;
   position: relative;
   white-space: nowrap;
-  animation: scroll 75s infinite linear;
+  animation: scroll 100s infinite linear;
 
   width: calc(100% * 10);
   transition: transform 0.3s ease;
@@ -96,8 +96,7 @@ li h6:hover {
 }
 
 .slider .slide img {
-  width: 1400px;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   filter: grayscale(80%);
   transition: all 0.3s ease;
@@ -184,7 +183,9 @@ li h6:hover {
 /* Estilos para dispositivos móviles */
 @media (max-width: 992px) {
   /* General, html and body */
-
+  .slider .slide img {
+    filter: grayscale(0%);
+  }
   /* Navbar */
   #offcanvasNavbar {
     background-color: #000000 !important;
@@ -314,6 +315,18 @@ li h6:hover {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  .slider-mobile {
+    display: block !important;
+  }
+  .slider-track {
+    display: none !important  ;
+  }
+  .slider-buttons {
+    display: none;
+  }
+  .boton-borde {
+    display: none;
+  }
   .main {
     margin-top: 0 !important;
   }
@@ -344,6 +357,18 @@ li h6:hover {
   overflow: hidden;
 }
 @media (max-width: 768px) {
+  .slider-mobile {
+    display: block !important;
+  }
+  .slider-track {
+    display: none !important;
+  }
+  .slider-buttons {
+    display: none;
+  }
+  .boton-borde {
+    display: none;
+  }
   .grid-gallery {
     grid-template-columns: 1fr;
   }
@@ -429,4 +454,20 @@ li h6:hover {
   body {
     font-size: 1rem;
   }
+}
+
+.boton-borde {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  right: 0%;
+  top: 0;
+  font-weight: 600;
+  font-size: 0.8rem;
+
+  transition: all 0.3s ease;
+}
+.borde {
+  border-radius: 5% !important;
 }

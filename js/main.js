@@ -78,6 +78,12 @@ function loadSideMenuContent() {
 //SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES//SERVICES
 
 function loadListContent() {
+  document.querySelector(".boton-borde").addEventListener("click", () => {
+    console.log("hola");
+    document.querySelectorAll(".img-item").forEach((item) => {
+      item.classList.toggle("borde"); // Quita el punto antes de "borde"
+    });
+  });
   // Datos correspondientes a cada ítem
   let serviceSubDescriptionContent = `
   <div class="">
@@ -294,3 +300,4 @@ lightbox.option({
   wrapAround: true,
   disableScrolling: true,
 });
+//eventlistener para boton-borde

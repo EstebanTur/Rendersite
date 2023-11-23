@@ -496,3 +496,7 @@ li h6:hover {
 .borde {
   border-radius: 5% !important;
 }
+::placeholder {
+  color: white;
+  font-weight: 600;
+}

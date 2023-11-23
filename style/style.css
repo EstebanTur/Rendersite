@@ -261,7 +261,7 @@ li h6:hover {
     bottom: 0;
   }
   .service-footer-mobile {
-    position: fixed !important;
+    position: fixed;
     bottom: 0;
   }
   .footer-work,
@@ -277,7 +277,26 @@ li h6:hover {
 }
 
 /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */
-
+.card {
+  background-color: transparent;
+  height: 150px;
+  width: auto;
+  color: white;
+  font-weight: 400;
+  overflow: hidden;
+}
+.bg-img {
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+/*.bg-img on touch change opacity*/
+.card:hover img {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
 #serviceSubDescription {
   max-height: 200px; /* Establecer una altura mínima */
 }
@@ -307,6 +326,9 @@ li h6:hover {
 }
 
 @media (min-width: 992px) {
+  .general-container {
+    display: none;
+  }
   #services-dropdown-container {
     display: none !important;
   }
@@ -326,7 +348,34 @@ li h6:hover {
     height: 5vh;
   }
 }
+@media (max-width: 768px) {
+  #container-descriptivo,
+  #serviceSubDescription,
+  .img-group-container {
+    display: none;
+  }
+  .general-container {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-footer-mobile {
+    position: relative !important;
+    height: fit-content;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  #container-descriptivo,
+  #serviceSubDescription,
+  .img-group-container {
+    display: none !important;
+  }
+  .general-container {
+    display: block;
+    display: flex;
+    flex-wrap: nowrap;
+  }
   .slider-mobile {
     display: block !important;
   }

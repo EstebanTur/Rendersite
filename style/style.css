@@ -182,6 +182,12 @@ li h6:hover {
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 992px) {
+  .inner-social-icons-container {
+    margin-top: 25svh;
+  }
+  .slider-mobile {
+    margin: 0 auto;
+  }
   /* General, html and body */
   .slider .slide img {
     filter: grayscale(0%);
@@ -256,6 +262,11 @@ li h6:hover {
   .service-footer-mobile {
     position: fixed !important;
     bottom: 0;
+  }
+  .footer-work,
+  .contact-mobile-footer {
+    position: relative !important;
+    height: fit-content;
   }
 }
 @media (max-width: 1055px) {
@@ -425,10 +436,6 @@ li h6:hover {
 .grid-item:hover .image-description {
   opacity: 1;
 }
-@media (max-width: 768px) {
-  .grid-gallery {
-  }
-}
 
 /* Contact page */ /* Contact page */ /* Contact page */ /* Contact page */ /* Contact page */ /* Contact page */ /* Contact page */ /* Contact page */ /* Contact page */ /* Contact page */ /* Contact page */ /* Contact page */
 .contact-main {
@@ -442,6 +449,18 @@ li h6:hover {
   form {
     width: 40%;
     margin-left: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .contact-main {
+    height: 90vh;
+    /* right and left padding of 10px */
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    padding-bottom: 20vh !important;
+    padding-top: 10px !important;
   }
 }
 

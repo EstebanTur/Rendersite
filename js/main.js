@@ -11,6 +11,9 @@ const images = document.querySelectorAll(".img-item");
 const allOptions = document.querySelectorAll(".dropdown-item");
 const containerDescriptivo = document.getElementById("container-descriptivo");
 const gridItem = document.querySelectorAll(".grid-item");
+const cards = document.querySelectorAll(".card");
+const buttonsModal = document.querySelectorAll(".button-modal");
+const imageModal = document.getElementById("image-modal");
 
 //Slider en el main
 
@@ -175,7 +178,25 @@ function hideServicesList() {
 function showServicesList() {
   servicesList.classList.remove("displayNone");
 }
-
+buttonsModal.forEach((buttonModal) => {
+  buttonModal.addEventListener("click", () => {
+    if (buttonModal.id === "button-modal-1") {
+      console.log("hola");
+      imageModal.src = `./img/001_CASA_ALFREDO_BERN_CAM_ESTAR_00.jpg`;
+    } else if (buttonModal.id === "button-modal-2") {
+      console.log("hola2");
+      imageModal.src = `./img/001_BOC_COMEDOR_LN_NS_CAM02.jpg`;
+    } else if (buttonModal.id === "button-modal-3") {
+      imageModal.src = `./img/001_CASA_ALFREDO_BERN_CAM_FRENTEO_01.jpg`;
+    } else if (buttonModal.id === "button-modal-4") {
+      imageModal.src = `./img/004_CASA_MAGDALENA_DAY_COC_01_02.jpg`;
+    } else if (buttonModal.id === "button-modal-5") {
+      imageModal.src = `./img/004_CASA_MAGDALENA_DAY_COC_02_01.jpg`;
+    } else if (buttonModal.id === "button-modal-6") {
+      imageModal.src = `./img/004_CASA_MAGDALENA_DAY_COC_03_00.jpg`;
+    }
+  });
+});
 //index Slider buttons//index Slider buttons//index Slider buttons//index Slider buttons//index Slider buttons
 //index Slider buttons//index Slider buttons//index Slider buttons//index Slider buttons//index Slider buttons
 

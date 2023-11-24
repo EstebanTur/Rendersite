@@ -24,6 +24,7 @@ li span:hover {
 }
 li h6:hover {
   color: rgb(118, 174, 202);
+  font-weight: 600;
 }
 .social-icons-container .inner-social-icons-container a img {
   filter: brightness(0.5); /* 180 grados representa el tinte azulado */
@@ -183,6 +184,13 @@ li h6:hover {
 
 /* Estilos para dispositivos móviles */
 @media (max-width: 992px) {
+  .index-main,
+  .slider {
+    height: 100% !important;
+  }
+  .index-footer-mobile {
+    position: fixed;
+  }
   .inner-social-icons-container {
     margin-top: 25svh;
   }
@@ -554,4 +562,12 @@ li h6:hover {
 ::placeholder {
   color: white;
   font-weight: 600;
+}
+.btn-img-container {
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+}
+.btn-img {
+  font-size: 0.5rem;
 }

@@ -180,34 +180,6 @@ function showServicesList() {
   servicesList.classList.remove("displayNone");
 }
 
-buttonsModal.forEach((buttonModal) => {
-  let modalOpen = true;
-  buttonModal.addEventListener("click", () => {
-    if (buttonModal.id === "button-modal-1") {
-      console.log("hola");
-      imageModal.src = `./img/001_CASA_ALFREDO_BERN_CAM_ESTAR_00.jpg`;
-    } else if (buttonModal.id === "button-modal-2") {
-      console.log("hola2");
-      imageModal.src = `./img/001_BOC_COMEDOR_LN_NS_CAM02.jpg`;
-    } else if (buttonModal.id === "button-modal-3") {
-      imageModal.src = `./img/001_CASA_ALFREDO_BERN_CAM_FRENTEO_01.jpg`;
-    } else if (buttonModal.id === "button-modal-4") {
-      imageModal.src = `./img/004_CASA_MAGDALENA_DAY_COC_01_02.jpg`;
-    } else if (buttonModal.id === "button-modal-5") {
-      imageModal.src = `./img/004_CASA_MAGDALENA_DAY_COC_02_01.jpg`;
-    } else if (buttonModal.id === "button-modal-6") {
-      imageModal.src = `./img/004_CASA_MAGDALENA_DAY_COC_03_00.jpg`;
-    }
-    document.querySelector(".main").classList.add("blurStyle");
-  });
-});
-document.querySelector(".btn-secondary").addEventListener("click", () => {
-  document.querySelector(".main").classList.remove("blurStyle");
-});
-document.querySelector(".modal").addEventListener("click", () => {
-  document.querySelector(".main").classList.remove("blurStyle");
-});
-
 //Set imgServicesMobile active on touch. if is active, toggle opacity to 1. if is not active, toggle opacity to 0.5
 
 //index Slider buttons//index Slider buttons//index Slider buttons//index Slider buttons//index Slider buttons
@@ -343,6 +315,7 @@ window.addEventListener("resize", handleScreenSizeChange);
 
 // Inicialmente, verifica el tamaño de la pantalla
 handleScreenSizeChange();
+
 //Work Section//Work Section//Work Section//Work Section//Work Section//Work Section//Work Section//Work Section//Work Section//Work Section
 lightbox.option({
   resizeDuration: 200,
@@ -350,3 +323,31 @@ lightbox.option({
   disableScrolling: true,
 });
 //eventlistener para boton-borde
+
+//Modales del services
+buttonsModal.forEach((buttonModal) => {
+  buttonModal.addEventListener("click", () => {
+    if (buttonModal.id === "button-modal-1") {
+      console.log("hola");
+      imageModal.src = `./img/001_CASA_ALFREDO_BERN_CAM_ESTAR_00.jpg`;
+    } else if (buttonModal.id === "button-modal-2") {
+      console.log("hola2");
+      imageModal.src = `./img/001_BOC_COMEDOR_LN_NS_CAM02.jpg`;
+    } else if (buttonModal.id === "button-modal-3") {
+      imageModal.src = `./img/001_CASA_ALFREDO_BERN_CAM_FRENTEO_01.jpg`;
+    } else if (buttonModal.id === "button-modal-4") {
+      imageModal.src = `./img/004_CASA_MAGDALENA_DAY_COC_01_02.jpg`;
+    } else if (buttonModal.id === "button-modal-5") {
+      imageModal.src = `./img/004_CASA_MAGDALENA_DAY_COC_02_01.jpg`;
+    } else if (buttonModal.id === "button-modal-6") {
+      imageModal.src = `./img/004_CASA_MAGDALENA_DAY_COC_03_00.jpg`;
+    }
+    document.querySelector(".main").classList.add("blurStyle");
+  });
+});
+document.querySelector(".btn-secondary").addEventListener("click", () => {
+  document.querySelector(".main").classList.remove("blurStyle");
+});
+document.querySelector(".modal").addEventListener("click", () => {
+  document.querySelector(".main").classList.remove("blurStyle");
+});

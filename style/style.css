@@ -287,14 +287,11 @@ li h6:hover {
 /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */ /* Services */
 .card {
   background-color: transparent;
-  height: 400px;
-
+  height: 250px;
   color: white;
-
+  margin-bottom: 10px;
   overflow: hidden;
-}
-.card-title {
-  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .bg-img {
@@ -311,6 +308,7 @@ li h6:hover {
   opacity: 1;
   transition: opacity 0.8s ease;
 }
+
 #serviceSubDescription {
   max-height: 200px; /* Establecer una altura mínima */
 }
@@ -570,4 +568,18 @@ li h6:hover {
 }
 .btn-img {
   font-size: 0.5rem;
+}
+.opacity-1 {
+  opacity: 1 !important;
+}
+.opacity-02 {
+  opacity: 0.2 !important;
+}
+.blurStyle {
+  /* dark blur */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -ms-filter: blur(8px);
 }

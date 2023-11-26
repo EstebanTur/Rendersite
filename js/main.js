@@ -14,6 +14,7 @@ const gridItem = document.querySelectorAll(".grid-item");
 const cards = document.querySelectorAll(".card");
 const buttonsModal = document.querySelectorAll(".button-modal");
 const imageModal = document.getElementById("image-modal");
+const imgServicesMobile = document.querySelectorAll(".bg-img");
 
 //Slider en el main
 
@@ -178,7 +179,9 @@ function hideServicesList() {
 function showServicesList() {
   servicesList.classList.remove("displayNone");
 }
+
 buttonsModal.forEach((buttonModal) => {
+  let modalOpen = true;
   buttonModal.addEventListener("click", () => {
     if (buttonModal.id === "button-modal-1") {
       console.log("hola");
@@ -195,8 +198,18 @@ buttonsModal.forEach((buttonModal) => {
     } else if (buttonModal.id === "button-modal-6") {
       imageModal.src = `./img/004_CASA_MAGDALENA_DAY_COC_03_00.jpg`;
     }
+    document.querySelector(".main").classList.add("blurStyle");
   });
 });
+document.querySelector(".btn-secondary").addEventListener("click", () => {
+  document.querySelector(".main").classList.remove("blurStyle");
+});
+document.querySelector(".modal").addEventListener("click", () => {
+  document.querySelector(".main").classList.remove("blurStyle");
+});
+
+//Set imgServicesMobile active on touch. if is active, toggle opacity to 1. if is not active, toggle opacity to 0.5
+
 //index Slider buttons//index Slider buttons//index Slider buttons//index Slider buttons//index Slider buttons
 //index Slider buttons//index Slider buttons//index Slider buttons//index Slider buttons//index Slider buttons
 
@@ -308,6 +321,22 @@ function handleScreenSizeChange() {
     });
   }
 }
+imgServicesMobile.forEach((imgServiceMobile) => {
+  let imgServiceMobileActive = true;
+  imgServiceMobile.addEventListener("click", () => {
+    if (imgServiceMobileActive) {
+      console.log("llega1");
+      imgServiceMobile.classList.add("opacity-1");
+      imgServiceMobile.classList.remove("opacity-02");
+      imgServiceMobileActive = false;
+    } else {
+      console.log("llega2");
+      imgServiceMobile.classList.add("opacity-02");
+      imgServiceMobile.classList.remove("opacity-1");
+      imgServiceMobileActive = true;
+    }
+  });
+});
 
 // Agregar evento de cambio de tamaño de pantalla
 window.addEventListener("resize", handleScreenSizeChange);
